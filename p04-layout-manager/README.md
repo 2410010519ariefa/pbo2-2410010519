@@ -28,7 +28,7 @@ Tab Design + Navigator: ![nav](screenshots/anggota-navigator.png)
 
 2. Terbentuk 5 baris. Ketika Rows bernilai 0, jumlah baris dihitung otomatis dari banyaknya komponen dan jumlah kolom. Terdapat 9 tombol dan 2 kolom, sehingga 9 / 2 = 4,5 dan dibulatkan ke atas menjadi 5 baris. Baris terakhir hanya berisi tombol 9.
 
-3. Setelah maximumSize keempat tombol diisi lebar 32767 dan tinggi 23 (sama dengan tinggi tombol), semua tombol melebar memenuhi lebar panel sehingga memiliki lebar yang sama. Sebelumnya, lebar tombol mengikuti panjang teksnya. Setelah Vertical Strut ditambahkan di antara tombol, muncul jarak kosong yang tetap di antara tombol-tombol tersebut.
+3. Setelah Vertical Strut dengan tinggi 20 piksel ditambahkan di antara tombol Dashboard dan Data Mahasiswa, muncul jarak kosong tetap setinggi 20 piksel di antara kedua tombol tersebut, sedangkan jarak antar tombol lainnya tidak berubah.
 
 ## Eksperimen Praktikum 4
 
@@ -65,4 +65,4 @@ Tindak lanjut: Saran sudah diterapkan, labelFor pada setiap label sudah diisi de
 
 ## Deklarasi Penggunaan AI
 
-Saya menggunakan Claude (Anthropic) untuk: (1) memandu langkah penggunaan NetBeans GUI Builder, termasuk mencari penyebab kesalahan saat menyusun panel dan layout, (2) membantu merumuskan draf jawaban eksperimen, dan (3) membantu menyusun README. Jawaban eksperimen saya cocokkan dengan hasil percobaan dan tangkapan layar saya sendiri. (4) membantu menyusun refleksi nomor 5
+Saya menggunakan Claude (Anthropic) untuk: (1) memandu langkah penggunaan NetBeans GUI Builder, termasuk mencari penyebab kesalahan saat menyusun panel dan layout, (2) membantu merumuskan draf jawaban eksperimen dan refleksi nomor 5, dan (3) membantu menyusun README. Jawaban eksperimen saya cocokkan dengan hasil percobaan dan tangkapan layar saya sendiri.
