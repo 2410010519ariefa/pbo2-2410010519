@@ -40,8 +40,13 @@ Tab Design + Navigator: ![nav](screenshots/anggota-navigator.png)
 
 ## Saran Teman (Tahap 4)
 
-Nama teman: (isi)
-Saran: (isi)
+Nama teman: Dhea Novita Amelia Putri
+
+Hasil pemeriksaan 8 butir: Ya untuk semua butir (1 sampai 8).
+
+Saran: Saran saya, di bagian labelFor bisa kamu isi dengan isian pasangannya masing-masing, misalnya npmLabel ke npmField, supaya label dikenali pembaca layar. Sesuai dengan panduan pada Form Biodata sebelumnya.
+
+Tindak lanjut: Saran sudah diterapkan, labelFor pada setiap label sudah diisi dengan isian pasangannya.
 
 ## Jawaban Refleksi
 
@@ -60,4 +65,4 @@ Saran: (isi)
 
 ## Deklarasi Penggunaan AI
 
-Saya menggunakan Claude (Anthropic) untuk: (1) memandu langkah penggunaan NetBeans GUI Builder, termasuk mencari penyebab kesalahan saat menyusun panel dan layout, (2) membantu merumuskan draf jawaban eksperimen, dan (3) membantu menyusun README. Jawaban eksperimen saya cocokkan dengan hasil percobaan dan tangkapan layar saya sendiri.
+Saya menggunakan Claude (Anthropic) untuk: (1) memandu langkah penggunaan NetBeans GUI Builder, termasuk mencari penyebab kesalahan saat menyusun panel dan layout, (2) membantu merumuskan draf jawaban eksperimen, dan (3) membantu menyusun README. Jawaban eksperimen saya cocokkan dengan hasil percobaan dan tangkapan layar saya sendiri. (4) membantu menyusun refleksi nomor 5

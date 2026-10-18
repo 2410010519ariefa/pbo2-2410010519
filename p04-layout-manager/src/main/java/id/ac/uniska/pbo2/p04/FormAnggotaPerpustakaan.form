@@ -95,6 +95,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="npmLabel">
               <Properties>
+                <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                  <ComponentRef name="npmField"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="NPM"/>
               </Properties>
               <Constraints>
@@ -112,6 +115,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="namaLabel">
               <Properties>
+                <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                  <ComponentRef name="namaField"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Nama lengkap"/>
               </Properties>
               <Constraints>
@@ -129,6 +135,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="prodiLabel">
               <Properties>
+                <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                  <ComponentRef name="prodiCombo"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Program studi"/>
               </Properties>
               <Constraints>
@@ -159,6 +168,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jenisLabel">
               <Properties>
+                <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                  <ComponentRef name="jenisPanel"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Jenis anggota"/>
               </Properties>
               <Constraints>
@@ -218,6 +230,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="emailLabel">
               <Properties>
+                <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                  <ComponentRef name="emailField"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Email"/>
               </Properties>
               <Constraints>
@@ -235,6 +250,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="hpLabel">
               <Properties>
+                <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                  <ComponentRef name="hpField"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Nomor HP"/>
               </Properties>
               <Constraints>
@@ -252,6 +270,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="alamatLabel">
               <Properties>
+                <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                  <ComponentRef name="alamatArea"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Alamat"/>
               </Properties>
               <Constraints>
