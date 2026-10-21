@@ -4,6 +4,7 @@
  */
 package id.ac.uniska.pbo2.p05;
 import java.awt.event.ActionEvent;
+import com.formdev.flatlaf.FlatLightLaf;
 
 /**
  *
@@ -159,7 +160,7 @@ public class KalkulatorSederhana extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
+        FlatLightLaf.setup();
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 

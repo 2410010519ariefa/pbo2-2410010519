@@ -42,11 +42,15 @@ Eksperimen 3. Kursor langsung berada di isian pertama karena method hapus memang
 
 ### Peta Event
 
-- Kotak centang setuju (setujuCheck), menu Events Item, itemStateChanged. Tombol Daftar hanya aktif jika kotak dicentang.
-- Tombol Batal (batalButton), menu Events Action, actionPerformed. Mengosongkan semua isian dan mengembalikan fokus ke NPM.
-- Tombol Daftar (daftarButton), menu Events Action, actionPerformed. Menampilkan ringkasan data dengan JOptionPane.
-- Isian NPM (npmField), menu Events Key, keyReleased. Label kecil (digitLabel) menampilkan jumlah digit, misalnya "8 dari 10 digit".
-- Form (JFrame di Navigator), menu Events Window, windowClosing. Meminta konfirmasi sebelum aplikasi ditutup.
+
+| Komponen | Menu Events | Aksi |
+|----------|-------------|------|
+| Kotak centang setuju (setujuCheck) | Item: itemStateChanged | Tombol Daftar hanya aktif jika dicentang |
+| Tombol Batal (batalButton) | Action: actionPerformed | Kosongkan semua isian dan kembalikan fokus ke NPM |
+| Tombol Daftar (daftarButton) | Action: actionPerformed | Tampilkan ringkasan data dengan JOptionPane |
+| Isian NPM (npmField) | Key: keyReleased | Label kecil (digitLabel) menampilkan jumlah digit, misalnya "8 dari 10 digit" |
+| Form (JFrame di Navigator) | Window: windowClosing | Minta konfirmasi sebelum aplikasi ditutup |
+
 
 Pengaturan properti: defaultCloseOperation form diubah menjadi DO_NOTHING dan centang enabled pada tombol Daftar dihilangkan.
 
