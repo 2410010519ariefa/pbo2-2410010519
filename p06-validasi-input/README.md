@@ -8,7 +8,7 @@ Kelas: 5B TI Reg Bjm
 
 Proyek: `p06-validasi-input` (package `id.ac.uniska.pbo2.p06`)
 
-File form yang dikumpulkan: `FormAnggota.java` dan `FormAnggota.form`. Nama form mengikuti Praktikum 3 di modul, yaitu `FormAnggota`.
+File form yang dikumpulkan: `FormAnggotaPerpustakaan.java` dan `FormAnggotaPerpustakaan.form`. Saat Praktikum 3 form ini bernama `FormAnggota` sesuai modul, lalu namanya diganti menjadi `FormAnggotaPerpustakaan` lewat Refactor di NetBeans sesuai ketentuan pengumpulan.
 
 File lain di proyek:
 - `Validator.java`: aturan validasi NPM, nama, email, dan nomor HP.
