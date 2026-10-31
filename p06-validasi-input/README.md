@@ -17,15 +17,20 @@ File lain di proyek:
 
 ## 1. Lembar Peer Review
 
-Teman peninjau: (diisi setelah peer review)
+Teman peninjau: Dhea Novita Amelia Putri
 
-![Lembar peer review](screenshots/peer-review.jpg)
+Dhea menilai delapan dari sepuluh heuristik dengan skor 0 (tidak ada masalah). Dua heuristik mendapat skor 1 (kosmetik), yaitu heuristik 8 (desain estetis dan minimalis) dan heuristik 10 (bantuan dan dokumentasi).
+
+![Lembar peer review dari Dhea](screenshots/peer-review.png)
 
 ## 2. Temuan Teman, Perbaikan, dan Commit
 
 | No | Temuan dari teman | Skor | Perbaikan yang saya lakukan | Commit |
 |----|-------------------|------|-----------------------------|--------|
-| 1  | (diisi setelah peer review) | | | |
+| 1  | Heuristik 8: komponen terlalu mepet ke tepi form, dan judul Kontak terlalu dekat dengan baris Jenis anggota. | 1 | Menambah jarak 12 piksel di seluruh tepi form dengan `EmptyBorder` pada content pane, dan mengubah Insets bagian atas `kontakLabel` menjadi 12. | `484f7fe` |
+| 2  | Heuristik 10: isian Nomor HP belum punya tooltip, padahal ada aturan khusus (diawali 08). | 1 | Menambah `toolTipText` pada `hpField`: "Diawali 08 dan berisi 10 sampai 13 digit angka". | `484f7fe` |
+
+Kedua perbaikan ada dalam satu commit khusus perbaikan peer review: `484f7fe` ("P06: perbaikan hasil peer review (jarak tampilan dan tooltip nomor HP)").
 
 ## 3. Tangkapan Layar
 
