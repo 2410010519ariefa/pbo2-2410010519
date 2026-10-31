@@ -18,12 +18,12 @@ import javax.swing.JTextField;
  *
  * @author acer
  */
-public class FormAnggota extends javax.swing.JFrame {
+public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(FormAnggota.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(FormAnggotaPerpustakaan.class.getName());
 
     /** Membuat form baru. */
-public FormAnggota() {
+public FormAnggotaPerpustakaan() {
     initComponents();
 
     // Gaya huruf dan placeholder FlatLaf
@@ -602,7 +602,7 @@ public FormAnggota() {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
     FlatLightLaf.setup();
-    new FormAnggota().setVisible(true);
+    new FormAnggotaPerpustakaan().setVisible(true);
 });
     }
 
