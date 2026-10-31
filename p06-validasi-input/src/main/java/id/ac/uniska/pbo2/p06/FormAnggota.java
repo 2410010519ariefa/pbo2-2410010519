@@ -44,6 +44,8 @@ public FormAnggota() {
 
     getRootPane().setDefaultButton(daftarButton);
     pack();
+        ((JComponent) getContentPane()).setBorder(
+            javax.swing.BorderFactory.createEmptyBorder(12, 12, 12, 12));
     setMinimumSize(getSize());
     setLocationRelativeTo(null);
 }
@@ -379,6 +381,7 @@ public FormAnggota() {
         gridBagConstraints.gridy = 8;
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        gridBagConstraints.insets = new java.awt.Insets(12, 0, 0, 0);
         formPanel.add(kontakLabel, gridBagConstraints);
 
         emailLabel.setDisplayedMnemonic('E');
@@ -391,6 +394,7 @@ public FormAnggota() {
         gridBagConstraints.insets = new java.awt.Insets(4, 0, 0, 12);
         formPanel.add(emailLabel, gridBagConstraints);
 
+        emailField.setToolTipText("Diawali 08 dan berisi 10 sampai 13 digit angka");
         emailField.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 emailFieldFocusLost(evt);
