@@ -1,12 +1,13 @@
+//Nama : Ariefa Salsabilla Azzahra
+//NPM : 2410010519
+
 package id.ac.uniska.pbo2.uts;
 
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.table.AbstractTableModel;
 
-/**
- * Menghubungkan daftar NilaiMahasiswa dengan JTable.
- */
+
 public class NilaiTableModel extends AbstractTableModel {
 
     private static final String[] KOLOM = {"NPM", "Nama", "Tugas", "UTS", "UAS", "Akhir", "Huruf"};
@@ -30,7 +31,6 @@ public class NilaiTableModel extends AbstractTableModel {
 
     @Override
     public Class<?> getColumnClass(int kolom) {
-        // kolom Tugas, UTS, dan UAS berisi angka sehingga rata kanan
         return (kolom >= 2 && kolom <= 4) ? Integer.class : String.class;
     }
 

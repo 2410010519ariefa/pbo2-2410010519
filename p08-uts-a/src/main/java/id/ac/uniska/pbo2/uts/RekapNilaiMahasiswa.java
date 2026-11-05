@@ -1,8 +1,14 @@
+//Nama : Ariefa Salsabilla Azzahra
+//NPM : 2410010519
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package id.ac.uniska.pbo2.uts;
+import com.formdev.flatlaf.FlatLaf;
+import java.awt.Color;
+import javax.swing.JTextField;
 
 /**
  *
@@ -19,6 +25,17 @@ public class RekapNilaiMahasiswa extends javax.swing.JFrame {
      */
     public RekapNilaiMahasiswa() {
         initComponents();
+                
+        npmField.putClientProperty("JTextField.placeholderText", "10 digit angka");
+        tugasField.putClientProperty("JTextField.placeholderText", "0 sampai 100");
+        utsField.putClientProperty("JTextField.placeholderText", "0 sampai 100");
+        uasField.putClientProperty("JTextField.placeholderText", "0 sampai 100");
+        pesanLabel.putClientProperty("FlatLaf.styleClass", "small");
+        pesanLabel.setForeground(warnaKesalahan());
+        getRootPane().setDefaultButton(simpanButton); // Enter sama dengan klik Simpan
+        perbaruiRingkasan();
+        setSize(900, 500);
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -115,9 +132,11 @@ public class RekapNilaiMahasiswa extends javax.swing.JFrame {
         tombolPanel.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 8, 0));
 
         simpanButton.setText("Simpan");
+        simpanButton.addActionListener(this::simpanButtonActionPerformed);
         tombolPanel.add(simpanButton);
 
         bersihkanButton.setText("Bersihkan");
+        bersihkanButton.addActionListener(this::bersihkanButtonActionPerformed);
         tombolPanel.add(bersihkanButton);
 
         aksiPanel.add(tombolPanel, java.awt.BorderLayout.CENTER);
@@ -143,6 +162,86 @@ public class RekapNilaiMahasiswa extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void simpanButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_simpanButtonActionPerformed
+        simpan();
+    }//GEN-LAST:event_simpanButtonActionPerformed
+
+    private void bersihkanButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bersihkanButtonActionPerformed
+        bersihkan();
+    }//GEN-LAST:event_bersihkanButtonActionPerformed
+
+    
+    private void simpan() {
+        hapusPesan();
+        String npm = npmField.getText().trim();
+        String nama = namaField.getText().trim();
+        if (tolak(Validator.npm(npm), npmField)) {
+            return;
+        }
+        if (model.adaNpm(npm)) {
+            tolak("NPM " + npm + " sudah terdaftar", npmField);
+            return;
+        }
+        if (tolak(Validator.nama(nama), namaField)) {
+            return;
+        }
+        if (tolak(Validator.nilai(tugasField.getText(), "Nilai Tugas"), tugasField)) {
+            return;
+        }
+        if (tolak(Validator.nilai(utsField.getText(), "Nilai UTS"), utsField)) {
+            return;
+        }
+        if (tolak(Validator.nilai(uasField.getText(), "Nilai UAS"), uasField)) {
+            return;
+        }
+        int tugas = Integer.parseInt(tugasField.getText().trim());
+        int uts = Integer.parseInt(utsField.getText().trim());
+        int uas = Integer.parseInt(uasField.getText().trim());
+        model.tambah(new NilaiMahasiswa(npm, nama, tugas, uts, uas));
+        bersihkan();
+        perbaruiRingkasan();
+    }
+
+    private void bersihkan() {
+        for (JTextField isian : daftarIsian()) {
+            isian.setText("");
+        }
+        hapusPesan();
+        npmField.requestFocusInWindow();
+    }
+
+    private JTextField[] daftarIsian() {
+        return new JTextField[]{npmField, namaField, tugasField, utsField, uasField};
+    }
+
+    
+    private boolean tolak(String kesalahan, JTextField isian) {
+        if (kesalahan == null) {
+            return false;
+        }
+        pesanLabel.setText(kesalahan);
+        isian.putClientProperty("JComponent.outline", "error");
+        isian.requestFocusInWindow();
+        return true;
+    }
+
+    private void hapusPesan() {
+        pesanLabel.setText(" ");
+        for (JTextField isian : daftarIsian()) {
+            isian.putClientProperty("JComponent.outline", null);
+        }
+    }
+
+    private void perbaruiRingkasan() {
+        ringkasanLabel.setText("Jumlah mahasiswa: " + model.getRowCount()
+                + ", rata-rata nilai akhir: " + NilaiMahasiswa.format(model.rataRataAkhir()));
+    }
+
+    
+    private static Color warnaKesalahan() {
+        return FlatLaf.isLafDark() ? new Color(0xFF8A80) : new Color(0xC62828);
+    }
+    
     /**
      * @param args the command line arguments
      */
